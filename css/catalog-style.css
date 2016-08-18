@@ -1,0 +1,346 @@
+html,
+body {
+  min-width: 1122px;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:"PT Sans Narrow";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color:#070707;
+  color:#000000;
+}
+h3 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.left-menu form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*.inner-page .main-header {
+	margin-bottom: 55px;
+}*/
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+}
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+.main-header a,
+.main-header span,
+.main-footer a,
+.main-footer p,
+.main-footer span
+  {
+  color:#ffffff;
+}
+.main-navigation li {
+  display:inline-block;
+  list-style: none;
+  padding-right:40px; 
+} 
+.content {
+  background-image: url("../img/inner-pages-background.jpg");
+  padding-bottom: 55px;
+  padding-top: 55px;
+}
+.barbershop-logo {
+	margin-right: 20px;
+	float:left;
+	width:140px;
+}
+.main-navigation {
+	float: left;
+	width: 620px;
+
+}
+
+.user-block {
+	float: right;
+	width:140px;
+
+}
+
+.left-menu {
+	float:left;
+	width:185px;
+	margin-right: 20px;
+	margin-left: 0px;
+}
+.catalog {
+	float: right;
+	width:720px;
+}
+.catalog-item {
+  display: inline-block;
+  width:220px;
+  height:285px;
+  vertical-align: top;
+  margin-right:20px;
+  margin-bottom:20px;
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.catalog-item:nth-last-child(-n+3) {
+  margin-bottom:0px;
+}
+.paginator {
+	display: inline-block;
+	margin-top: 45px;
+}
+
+.inner-page .main-footer {
+	/*	margin-top: 50px;*/
+		padding-top: 60px;
+  	padding-bottom: 40px;
+}
+.footer-contacts {
+  float: left;
+  width: 320px;
+  margin-right: 60px;
+  min-height: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 180px;
+  min-height: 90px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 180px;
+  min-height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+/*body {
+  padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  display: none;
+}
+
+body > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > * > *::before {
+  top: 0;
+  left: 0;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+  color: white;
+
+  background: green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+
+  background: rgb(255, 45, 82);
+}
+
+body > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+
+}
+
+body > * > * > *::before {
+  color: black;
+
+  background: rgb(234, 255, 45);
+}
+
+.main-header::before {
+  content: ".main-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
+
+.main-navigation::before {
+  content: ".main-navigation";
+}
+
+.user-block::before {
+  content: ".user-block";
+}
+
+.index-logo::before {
+  content: ".index-logo";
+}
+
+.features::before {
+  content: ".features";
+  top: -28px;
+}
+
+.features-item::before {
+  content: ".features-item";
+}
+
+.index-content::before {
+  content: ".index-content";
+}
+
+.index-content-left::before {
+  content: ".index-content-left";
+  left: auto;
+  right: 0;
+}
+
+.index-content-right::before {
+  content: ".index-content-right";
+  left: auto;
+  right: 0;
+}
+
+.main-footer::before {
+  content: ".main-footer";
+}
+
+.main-footer .container::before {
+  top: -28px;
+}
+
+.footer-contacts::before {
+  content: ".footer-contacts";
+}
+
+.footer-social::before {
+  content: ".footer-social";
+}
+
+.footer-copyright::before {
+  content: ".footer-copyright";
+}
+.barbershop-logo::before {
+  content: ".barbershop-logo";
+}*/*/
