@@ -6,12 +6,12 @@ body {
 }
 
 body {
-	font-family:"PT Sans Narrow", "Arial", sans-serif;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 24px;
-	text-transform: uppercase;
-	color:#ffffff;
+  font-family:"PT Sans Narrow", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color:#ffffff;
   background: #000000 url("../img/background.jpg") no-repeat center top;
 }
 
@@ -72,6 +72,7 @@ body {
 .login {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   font-size: 16px;
   line-height: 20px;
   vertical-align: top;
@@ -147,7 +148,8 @@ body {
   height: 20px;
   margin-left: -10px;
   background-color: #ffffff;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .features-item:last-child {
@@ -205,6 +207,7 @@ body {
 
 .btn {
   display: inline-block;
+  vertical-align: top;
   margin-right: 16px;
   padding: 10px 33px;
   font-weight: 700;
@@ -335,6 +338,7 @@ body {
 
 .social-btn {
   display: inline-block;
+  vertical-align: top;
   width: 43px;
   height: 43px;
   margin: 0 2px;
@@ -342,6 +346,8 @@ body {
   vertical-align: top;
   text-decoration: none;
   background: #000000;
+    -webkit-transition: background-position 0.5s,
+    background-color 0.5s;
     transition: 
     background-position 0.5s,
     background-color 0.5s;
@@ -399,8 +405,174 @@ body {
   background-color: #ffffff;
 }
 
+/*модальное окно*/
 
 
+.modal-content {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  display: none;
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+  color: #000000;
+  background: #f8f3f0 url("img/pattern-white.jpg");
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+  background: #e9e5dc url("img/map.png");
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  background-image: url("img/icon-user.png");
+  background-repeat: no-repeat;
+  background-position: 100% -504px;
+}
+
+.login-form input.icon-password {
+  background-image: url("img/icon-password.png");
+  background-repeat: no-repeat;
+  background-position: 100% -45px;
+}
+
+.login-form .restore {
+  float: right;
+  color: #000000;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 
 
 
@@ -512,7 +684,8 @@ body {
   right: 18px;
   width: 8px;
   height: 8px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background-color: #000000;
 }
 
@@ -648,6 +821,11 @@ body {
 
 
 .catalog-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   float: right;
   width:720px;
   margin-top: 25px;
@@ -655,8 +833,8 @@ body {
 
 .catalog-item {
   display: inline-block;
+  vertical-align: top;
   width:220px;
-  height:285px;
   vertical-align: top;
   margin-left:18px;
   margin-bottom:20px;
@@ -683,33 +861,44 @@ body {
   margin-top: 5px;
 }
 
-.catalog-page .price-block p {
-  display: inline-block;
+.catalog-page .price-block {
+  position: relative;
+ margin-top:15px; 
+  width: 205px;
+  height: 45px;
+  margin-bottom: 20px;
+}
+.catalog-page .price-block span {
+  position: absolute;
+  display: block;
   vertical-align: middle;
   color:#000000;
   font-size: 14px;
   line-height: 24px;
   background-color: #e5e5e5;
-  padding: 10px 28px;
+  padding: 10px 18px;
   float: left;
-  margin-left: 15px;
+  top:0px;
+  left:25px;  
 }
 
 .catalog-page .price-btn {
-  display: inline-block;
-  vertical-align: middle;
+  position: absolute;
+  top:0px;
+  left:116px;  
+  float: right; 
+  display: block;
   padding: 10px 18px;
-  margin-left: 0;
-  margin-top: 14px;
 }
 
 .paginator {
-  margin-left: 19px;
+  margin-top: 4px;
+  margin-left: 238px;
 }
 
 .paginator a {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   margin-top: 28px;
   background-color: #000000;
   text-decoration: none;
@@ -771,9 +960,16 @@ body {
 }
 
 .images-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 20px;
 }
 
@@ -800,6 +996,7 @@ body {
 .item-description span.
 .item-description p {
   display: inline-block;
+  vertical-align: top;
   margin-left: 10px;
 }
 
@@ -819,6 +1016,7 @@ body {
 }
 
 .item-page .price-block {
+  position: relative;
   width: 205px;
   height: 45px;
   margin-top: 35px;
@@ -826,6 +1024,9 @@ body {
 }
 
 .item-page .price-block span {
+  position: absolute;
+  top:0px;
+  left:0px;  
   display: block;
   vertical-align: middle;
   color:#000000;
@@ -837,6 +1038,9 @@ body {
 }
 
 .item-page .buy-btn {
+  position: absolute;
+  top:0px;
+  left:109px;  
   float: right; 
   display: block;
   padding: 10px 18px;
@@ -865,7 +1069,8 @@ body {
   right: 389px;
   width: 8px;
   height: 8px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   background-color: #000000;
 }
 
@@ -873,6 +1078,221 @@ body {
     margin-top: 46px;
     padding-top: 54px;
   }
+
+
+ /*ПРАЙС*/
+
+
+.inner-page {
+  color: #000000;
+  background: #f8f3f0 url("img/pattern-white.jpg") repeat;
+}
+
+
+.inner-page .main-header {
+  margin-bottom: 55px;
+}
+
+.inner-page-title {
+  margin-bottom: 55px;
+}
+
+/*заголовок и хлебные крошки*/
+
+.inner-page-title h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
+}
+
+.breadcrumbs a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #aba9a7;
+}
+
+.breadcrumbs .current::after {
+  display: none;
+}
+
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #000000;
+}
+
+/*основное содержание*/
+
+.inner-content {
+  margin-bottom: 75px;
+}
+
+.inner-content h2 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+}
+
+.inner-content h3 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.inner-content h2 + h3 {
+    margin-top: 30px;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 10px 15px;
+
+  border: 2px solid #000000;
+}
+
+.big-heading {
+  margin-top: 55px;
+  margin-bottom: 65px;
+
+  text-align: center;
+}
+
+.big-heading h2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0 25px;
+  z-index: 2;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
+}
+
+.big-heading::after {
+  content: "";
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  display: block;
+  border-bottom: 2px solid #000000;
+}
+
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.prices-table {
+  width: 100%;
+}
+
+.prices-table td {
+  width: 50%;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+.inner-columns {
+  margin: 60px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+  width: 460px;
+}
+
+.inner-column-left {
+  float: left;
+}
+
+.inner-column-right {
+  float: right;
+}
+
+.inner-column-left>*:first-child,
+.inner-column-right>*:first-child {
+  margin-top: 0;
+}
+
+.inner-column-left>*:last-child,
+.inner-column-right>*:last-child {
+  margin-bottom: 0;
+}
+
+.short-text {
+  padding-right: 80px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
